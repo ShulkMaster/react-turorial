@@ -2,6 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Counter } from './components/Counter/Counter';
+import { UserList } from './components/UserList/UserList';
+import { WidthDisplay } from './components/WidthDisplay/WidthDisplay';
+import { Img } from './components/Img/Img';
+import { Show } from './components/Show/Show';
 
 function App() {
   return (
@@ -21,7 +25,12 @@ function App() {
         </a>
       </header>
       <div>
-        <Counter />
+        {/*<Counter />*/}
+        {/*<UserList />*/}
+        {/*<WidthDisplay />*/}
+        {/*<Show>*/}
+        {/*  <Img />*/}
+        {/*</Show>*/}
       </div>
     </div>
   );
