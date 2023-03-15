@@ -8,13 +8,19 @@ import { Img } from './components/Img/Img';
 import { Show } from './components/Show/Show';
 import { Clock } from './components/Clock/Clock';
 
-function App() {
+type AppProps = {
+  name: string;
+  id?: number;
+};
+
+function App(props: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h2>{props.name}</h2>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> {props.id}.
         </p>
         <a
           className="App-link"
@@ -22,11 +28,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn  with tsx
         </a>
       </header>
       <div>
-        {/*<Counter />*/}
+        <Counter />
         {/*<UserList />*/}
         {/*<WidthDisplay />*/}
         {/*<Show>*/}
