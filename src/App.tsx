@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Counter } from './components/Counter/Counter';
@@ -14,6 +14,7 @@ type AppProps = {
 };
 
 function App(props: AppProps) {
+  const [id, setId] = useState(1);
   return (
     <div className="App">
       <header className="App-header">
@@ -32,8 +33,8 @@ function App(props: AppProps) {
         </a>
       </header>
       <div>
-        <Counter />
-        {/*<UserList />*/}
+        <Counter onCountChange={setId} />
+        <UserList id={id} />
         {/*<WidthDisplay />*/}
         {/*<Show>*/}
         {/*  <Clock clean={false} />*/}

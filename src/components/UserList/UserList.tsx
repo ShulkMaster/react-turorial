@@ -5,7 +5,12 @@ interface PostData {
   body: string;
 }
 
-export function UserList(): JSX.Element {
+export type UserListProps = {
+  id: number;
+}
+
+export function UserList(props: UserListProps): JSX.Element {
+  const id = props.id;
   const [data, setData] = useState<PostData | null>(null);
 
   useEffect(() => {
@@ -13,10 +18,10 @@ export function UserList(): JSX.Element {
     // (i.e., after the first render)
 
     // Use the fetch() method to make a GET request to an API
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetch('https://jsonplaceholder.typicode.com/posts/' + id)
       .then(response => response.json())
       .then((data: PostData) => setData(data));
-  }, []); // Add an empty dependency array to only run the effect once
+  }, [id]);
 
   if (!data) {
     return <div>Loading...</div>;
@@ -24,6 +29,7 @@ export function UserList(): JSX.Element {
 
   return (
     <div>
+      <p>{props.id}</p>
       <h1>{data.title}</h1>
       <p>{data.body}</p>
     </div>
