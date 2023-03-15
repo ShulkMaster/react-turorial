@@ -25,7 +25,7 @@ class Subscriber {
 const intervals: number[] = [];
 
 
-function Clock({clean}: ClockProps) {
+export function Clock({clean}: ClockProps) {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -38,7 +38,10 @@ function Clock({clean}: ClockProps) {
     }
 
     return () => {
-      intervals.forEach(clearInterval);
+      for (let x = 0; x < intervals.length; x++) {
+        const id = intervals.pop();
+        clearInterval(id);
+      }
     };
   }, [clean, setTime]);
 

@@ -6,6 +6,7 @@ import { UserList } from './components/UserList/UserList';
 import { WidthDisplay } from './components/WidthDisplay/WidthDisplay';
 import { Img } from './components/Img/Img';
 import { Show } from './components/Show/Show';
+import { Clock } from './components/Clock/Clock';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         {/*<UserList />*/}
         {/*<WidthDisplay />*/}
         {/*<Show>*/}
-        {/*  <Img />*/}
+        {/*  <Clock clean={false} />*/}
         {/*</Show>*/}
       </div>
     </div>
