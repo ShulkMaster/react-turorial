@@ -38,6 +38,7 @@ export function Clock({clean}: ClockProps) {
     }
 
     return () => {
+      console.log('Se desmonto el componente');
       for (let x = 0; x < intervals.length; x++) {
         const id = intervals.pop();
         clearInterval(id);

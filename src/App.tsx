@@ -15,6 +15,8 @@ type AppProps = {
 
 function App(props: AppProps) {
   const [id, setId] = useState(1);
+
+  // const MyThing = () => <img alt="hla" src="https://pbs.twimg.com/media/ByESfVcCUAETXCJ.jpg" />
   return (
     <div className="App">
       <header className="App-header">
@@ -33,12 +35,13 @@ function App(props: AppProps) {
         </a>
       </header>
       <div>
-        <Counter onCountChange={setId} />
-        <UserList id={id} />
+        {/*<Img/>*/}
+        {/*<Counter onCountChange={setId} />*/}
+        {/*<UserList id={id} />*/}
         {/*<WidthDisplay />*/}
-        {/*<Show>*/}
-        {/*  <Clock clean={false} />*/}
-        {/*</Show>*/}
+        <Show>
+          <Clock clean={false} />
+        </Show>
       </div>
     </div>
   );

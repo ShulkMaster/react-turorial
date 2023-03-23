@@ -11,6 +11,7 @@ export function Show({children}: ShowProps) {
     setShowChildren(!showChildren);
   };
 
+  console.log(children);
   return (
     <div>
       <button onClick={toggleShowChildren}>
